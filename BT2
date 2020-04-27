@@ -1,0 +1,159 @@
+
+#include <iostream>;
+#include <cmath>;
+
+using namespace std;
+
+void ex1()
+{
+    int a, b;
+   
+
+    cout << "Choose a and b" << endl;
+    
+    cout << "a = " << endl;
+    
+    cin >> a;
+    
+    cout << "b = " << endl;
+    
+    cin >> b;
+
+    cout << "a + b = " << a + b << endl;
+    
+    cout << "a - b = " << a - b << endl;
+    
+    cout << "a * b = " << a * b << endl;
+    
+    cout << "a / b = " << float (a) / b << endl;
+
+
+
+}
+
+void ex2()
+{
+    char proDuctname[50];
+    int amount, Price , total_money ;
+
+
+    cout << "Enter name product" << endl;
+    
+    cin >> proDuctname;
+    
+    cout << "Your product name's : " << proDuctname << endl;
+    
+    cout << "Enter price" << endl;
+    
+    cin >> Price;
+    
+    cout << "Price product : " << Price << " $" << endl;
+    
+    cout << "Enter amount" << endl;
+    
+    cin >> amount;
+    
+    cout << "Amount product : " << amount << endl;
+    
+    total_money = amount * Price;
+
+    cout << "Total money = " << total_money << " $" << endl;
+
+    float tax = 0.1 * total_money;
+
+    cout << "Money after tax 10% : " << tax << " $" << endl;
+
+
+
+
+
+
+
+}
+
+void ex3()
+{
+    float toan, li, hoa;
+    cout << "Ban can nhap diem thi cho minh de tinh trung binh " << endl;
+    cout << "Nhap diem mon toan cua ban " << endl;
+    cin >> toan;
+    cout << "Diem toan cua ban la : " << toan << endl;
+
+    cout << "Nhap diem mon li cua ban " << endl;
+    cin >> li;
+    cout << "Diem li cua ban la : " << li << endl;
+    
+    cout << "Nhap diem mon hoa cua ban " << endl;
+    cin >> hoa;
+    cout << "Diem toan cua ban la : " << hoa << endl;
+    float diemTrungbinh = (toan + li + hoa) / 3;
+    cout << "Va day la diem trung binh 3 mon cua ban \n (toan + li + hoa) / 3 = " << diemTrungbinh << endl;
+
+}
+
+void ex4()
+{
+    int R, perimeter, acreage;
+    float PI = 3.14;
+    cout << "Vui long nhan ban kinh duong tron cua ban :" << endl;
+    cin >> R;
+    cout << "Ban kinh duong tron cua ban la : " << R << endl;
+
+    perimeter = 2 * R * PI;
+    cout << "Vay chu vi duong tron \n 2 * R * PI= : " << perimeter << endl;
+    acreage = R * R * PI;
+    cout << "Va dien tich duong tron \n R * R * PI = " << acreage << endl;
+
+
+}
+
+void ex5()
+{
+    int numberCar, number1, number2, number3, number4, result;
+
+    cout << "Vui long nhap 4 so xe tu trai qua phai cua ban" << endl;
+    cin >> numberCar;
+    cout << "So xe cua ban la : " << numberCar << endl;
+
+    //Cách lấy từng nút trong 4 số
+    number1 = numberCar % 10;
+    number2 = numberCar /  10 % 10;
+    number3 = numberCar / 100 % 10;
+    number4 = numberCar / 1000;
+
+    cout << "Bon so cua ban lan luot co" << endl;
+
+    cout << "So thu nhat : " << number4 << endl;
+
+    cout << "So thu hai : " << number3 << endl;
+
+    cout << "So thu ba : " << number2 << endl;
+
+    cout << "So thu tu : " << number1 << endl;
+
+    result = (number1 + number2 + number3 + number4) % 10;
+
+    cout << "Va co so nut la : " << result << endl;
+
+}
+
+
+int main()
+{
+    cout << "bai tap 1" << endl;
+    ex1();
+    
+    cout << "bai tap 2" << endl;
+    ex2();
+  
+    cout << "bai tap 3" << endl;
+    ex3();
+
+    cout << "Bai tap 4" << endl;
+    ex4();
+
+    cout << "bai tap 5" << endl;
+    ex5();
+    system("pause");
+
+}
